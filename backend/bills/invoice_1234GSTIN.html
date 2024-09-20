@@ -1,0 +1,123 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bill</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f4f4f4;
+                }
+                .container {
+                    width: 100%;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                }
+                .details, .address {
+                    margin-bottom: 20px;
+                }
+                .details p, .address p {
+                    margin: 0;
+                    line-height: 1.6;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 10px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+                .total {
+                    text-align: right;
+                }
+                .total span {
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Bill</h1>
+
+                <div class="details">
+                    <p><strong>Date:</strong> 20/09/2024</p>
+                    <p><strong>GSTIN:</strong> 1234GSTIN</p>
+                    <p><strong>Legal Name:</strong> MUTHHUU </p>
+                    <p><strong>Trade Name:</strong> LAVKUSH TRADING COMPANY</p>
+                </div>
+                
+                <div class="address">
+                    <h2>Principal Address</h2>
+                    <p>SARDAR NAGAR, KHURDA MADARPUR</p>
+                    <p>HARDOI, KANPUR, INDIA - 241305</p>
+                </div>
+                
+                <div class="address">
+                    <h2>Shipping Address</h2>
+                    <p>SARDAR NAGAR, KHURDA MADARPUR</p>
+                    <p>KANPUR, UTTAR PRADESH, INDIA - 241305</p>
+                </div>
+        
+                <table>
+                    <thead>
+                        <tr>
+                            <th>HSN Code</th>
+                            <th>Product Info</th>
+                            <th>Qty</th>
+                            <th>Unit Price</th>
+                            <th>CGST</th>
+                            <th>SGST</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>1234</td> <!-- Ensure hsn_code is displayed -->
+                                <td>AMUL COOL BOTTLE COMBO</td>
+                                <td>10</td>
+                                <td>₹150</td>
+                                <td>₹135.00</td>
+                                <td>₹135.00</td>
+                                <td>₹1770.00</td>
+                            </tr>
+                            <tr>
+                                <td>1235</td> <!-- Ensure hsn_code is displayed -->
+                                <td>NAMASTE INDIA DAIRY PRODUCT</td>
+                                <td>14</td>
+                                <td>₹258</td>
+                                <td>₹433.44</td>
+                                <td>₹433.44</td>
+                                <td>₹4478.88</td>
+                            </tr>
+                    </tbody>
+                </table>
+        
+                <div class="total">
+                    <p>Subtotal: ₹5112.00</p>
+                    <p>Total Tax (CGST + SGST): ₹1136.88</p>
+                    <p><span>Total Amount: ₹6248.88</span></p>
+                    <p><span>Total Amount in Words: Six thousand, two hundred forty-eight And eighty-eight Paise</span></p>
+                </div>
+        
+                <p><strong>Payment Method:</strong> undefined</p>
+            </div>
+        </body>
+        </html>
+        
