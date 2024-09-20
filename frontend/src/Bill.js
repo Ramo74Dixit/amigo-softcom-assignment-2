@@ -58,7 +58,7 @@ const BillForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/generate-bill', {
+      const response = await fetch('https://amigo-softcom-assignment-2.onrender.com/generate-bill', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const BillForm = () => {
         console.log('Bill generated:', result);
         setSuccessMessage('Bill generated successfully.');
         setError('');
-        setDownloadLink(`http://localhost:5000/${result.filePath}`);
+        setDownloadLink(`https://amigo-softcom-assignment-2.onrender.com/${result.filePath}`);
       } else {
         const result = await response.text();
         console.log('Unexpected response:', result);
@@ -93,20 +93,15 @@ const BillForm = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center p-8 overflow-hidden">
-      {/* Background Shapes */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-indigo-400 to-blue-500 rounded-full opacity-50 transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-400 to-yellow-400 rounded-full opacity-40 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-teal-400 to-green-400 rounded-full opacity-30 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
       </div>
-
-      {/* Glassmorphic Form Container */}
       <div className="relative bg-white bg-opacity-40 border border-gray-300 shadow-2xl rounded-3xl p-12 w-full max-w-4xl transform hover:scale-105 hover:bg-opacity-50 transition duration-500 ease-in-out z-10">
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Title */}
           <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-10">Billing Information</h1>
-
-          {/* Party Details */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-700">Party Details</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -136,8 +131,6 @@ const BillForm = () => {
               />
             </div>
           </div>
-
-          {/* Principal Address */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-700">Principal Address</h2>
             <input
@@ -183,8 +176,6 @@ const BillForm = () => {
               className="bg-white bg-opacity-60 border border-gray-300 p-4 rounded-lg w-full focus:ring-2 focus:ring-blue-400 shadow-lg text-gray-700 placeholder-gray-500"
             />
           </div>
-
-          {/* Shipping Address */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-700">Shipping Address</h2>
             <input
@@ -230,8 +221,6 @@ const BillForm = () => {
               className="bg-white bg-opacity-60 border border-gray-300 p-4 rounded-lg w-full focus:ring-2 focus:ring-blue-400 shadow-lg text-gray-700 placeholder-gray-500"
             />
           </div>
-
-          {/* HSN Details */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-700">HSN Details</h2>
             {hsnDetails.map((hsnDetail, index) => (
@@ -286,8 +275,6 @@ const BillForm = () => {
               Add HSN Detail
             </button>
           </div>
-
-          {/* Quantity and Rate */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-700">Quantity and Rate</h2>
             {quantities.map((quantity, index) => (
@@ -319,8 +306,6 @@ const BillForm = () => {
               Add Item
             </button>
           </div>
-
-          {/* Submission */}
           <div className="space-y-4">
             <button
               type="submit"
@@ -329,8 +314,6 @@ const BillForm = () => {
               Generate Bill
             </button>
           </div>
-
-          {/* Error and Success Messages */}
           {error && <p className="text-red-600 text-center">{error}</p>}
           {successMessage && <p className="text-green-600 text-center">{successMessage}</p>}
           {downloadLink && (

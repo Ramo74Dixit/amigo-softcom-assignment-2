@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 module.exports = {
     bill_0: (currentDate, partyData, itemsWithTotal, subtotal, totalTax, totalAmount, totalAmountInWords) => {
         const html = `
